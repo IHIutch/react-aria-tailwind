@@ -1,5 +1,12 @@
 import React from "react";
 import { Button } from "../src/Button";
+import {
+  FormControl,
+  FormErrorMessage,
+  FormHelperText,
+  FormLabel,
+  Input,
+} from "../src/FormControl";
 import { ToggleButton } from "../src/ToggleButton";
 
 export function Example() {
@@ -41,6 +48,22 @@ export function Example() {
       >
         Toggle Button
       </ToggleButton>
+
+      <FormControl isInvalid>
+        <FormLabel className="block pb-2 text-sm font-medium text-gray-900">
+          Type Your Name
+        </FormLabel>
+        <Input
+          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 "
+          placeholder="John"
+        />
+        <FormHelperText className="mt-2 text-sm text-gray-600">
+          Desc test
+        </FormHelperText>
+        <FormErrorMessage className="mt-2 text-sm text-red-600">
+          Error test
+        </FormErrorMessage>
+      </FormControl>
     </div>
   );
 }
